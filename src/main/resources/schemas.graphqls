@@ -1,0 +1,51 @@
+schema{
+    query: Query
+}
+
+type Query{
+    allPersons: [Person]
+    personById(id: Int!): Person
+    allCities: [City]
+    cityById(id: Int!): City
+    allAnimals: [Animal]
+    animalById(id: Int!): Animal
+}
+
+type Person{
+    "Identifiant de la personne"
+    id: Int
+
+    "Prénom de la personne"
+    firstName: String
+
+    "Nom de la personne"
+    lastName: String
+
+    "Age de la personne"
+    age: Int
+
+    "Ville de la personne"
+    city: City
+
+    "Animaux de la personne"
+    animals: [Animal]
+}
+
+type City{
+    "Identifiant de la ville"
+    id: Int
+
+    "Nom de la ville"
+    name: String
+}
+
+type Animal{
+    "Identifiant de l'animal"
+    id: Int
+
+    "Nom de l'animal"
+    name: String
+
+    "Couleur de l'animal"
+    color: String
+}

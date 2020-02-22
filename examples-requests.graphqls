@@ -1,0 +1,11 @@
+{ allPersons{ id, firstName, lastName, age, city { id, name}, animals { id, name, color} } }
+
+{ personById(id: 1){ id, firstName, lastName, age, city { id, name}, animals { id, name, color} } }
+
+{ allCities{ id, name } }
+
+{ cityById(id: 1){id, name} }
+
+{ allAnimals{id, name, color} }
+
+{ animalById(id: 1) {id, name, color} }
